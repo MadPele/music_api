@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add song</title>
+</head>
+<body>
+    <a style="margin-left: 15px" href="http://192.168.0.107:80/">GET</a>
+    <a style="margin-left: 15px" href="http://192.168.0.107:80/add">POST</a>
+    <a style="margin-left: 15px" href="http://192.168.0.107:80/update">PUT</a>
+    <a style="margin-left: 15px; margin-bottom: 25px" href="http://192.168.0.107:80/delete">DELETE</a>
+    <h2 style="margin-left: 15px">Add track</h2>
+    <form style="margin-top: 25px" action="http://192.168.0.107:80/add" method="POST">
+        <label style="margin-left: 15px">Artist:
+            <input type="text" name="artist">
+        </label><br /><br />
+        <label style="margin-left: 15px">Album:
+            <input type="text" name="album">
+        </label><br /><br />
+        <label style="margin-left: 15px">Track name:
+            <input type="text" name="track">
+        </label><br /><br />
+        <label style="margin-left: 15px">Duration minutes:
+            <input type="number" min="0" name="duration_min">
+        </label>
+        <label style="margin-left: 15px">Duration seconds:
+            <input type="number" min="0" name="duration_sec">
+        </label><br /><br />
+        <label style="margin-left: 15px">Format (e.g. mp3)
+            <input type="text" name="format">
+        </label><br /><br />
+        <label style="margin-left: 15px">Year created:
+            <input type="number" min="1800" name="year">
+        </label><br /><br />
+        <input type="submit" value="Wyślij">
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete track</title>
+</head>
+<body>
+    <a style="margin-left: 15px" href="http://192.168.0.107:80/">GET</a>
+    <a style="margin-left: 15px" href="http://192.168.0.107:80/add">POST</a>
+    <a style="margin-left: 15px" href="http://192.168.0.107:80/update">PUT</a>
+    <a style="margin-left: 15px" href="http://192.168.0.107:80/delete">DELETE</a>
+    <h2 style="margin-left: 15px">Delete track</h2>
+    <form action="http://192.168.0.107:80/delete" method="POST">
+        <label style="margin-left: 15px">Artist:
+            <input type="text" name="artist">
+        </label><br /><br />
+        <label style="margin-left: 15px">Album:
+            <input type="text" name="album">
+        </label><br /><br />
+        <label style="margin-left: 15px">Track name:
+            <input type="text" name="track">
+        </label><br /><br />
+        <input type="submit" value="Wyślij">
+    </form>
+</body>
+</html>

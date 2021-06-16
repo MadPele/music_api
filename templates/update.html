@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update track</title>
+</head>
+<body>
+    <a style="margin-left: 15px" href="http://192.168.0.107:80/">GET</a>
+    <a style="margin-left: 15px" href="http://192.168.0.107:80/add">POST</a>
+    <a style="margin-left: 15px" href="http://192.168.0.107:80/update">PUT</a>
+    <a style="margin-left: 15px" href="http://192.168.0.107:80/delete">DELETE</a>
+    <form style="margin-left: 15px" action="http://192.168.0.107:80/update" method="POST">
+        <h2>Song you wanna update</h2>
+        <label>Artist:
+            <input type="text" name="artist">
+        </label><br /><br />
+        <label>Album:
+            <input type="text" name="album">
+        </label><br /><br />
+        <label>Track name:
+            <input type="text" name="track">
+        </label><br /><br />
+        <h2>New data</h2>
+        <label>New title:
+            <input type="text" name="up_title">
+        </label><br /><br />
+        <label>New duration <br />
+            minutes: <input type="number" min="0" name="up_duration_min"> <br/>
+            seconds: <input type="number" min="0" name="up_duration_sec">
+        </label><br /><br />
+        <label>New format:
+            <input type="text" name="up_format">
+        </label><br /><br />
+        <input type="submit" value="Wyślij">
+    </form>
+</body>
+</html>

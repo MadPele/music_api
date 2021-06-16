@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MuLook</title>
+</head>
+<body>
+    <a style="margin-left: 15px" href="http://192.168.0.107:80/">GET</a>
+    <a style="margin-left: 15px" href="http://192.168.0.107:80/add">POST</a>
+    <a style="margin-left: 15px" href="http://192.168.0.107:80/update">PUT</a>
+    <a style="margin-left: 15px" href="http://192.168.0.107:80/delete">DELETE</a>
+    <h1>Check out my favorite music!</h1>
+    {% for artist in data %}
+        <div style="font-family: cursive; margin-left: 15px; margin-top: 55px">
+            <p style="font-size: x-large"><b>Artist:</b> {{artist}}</p>
+            {% for album in data[artist] %}
+                <p style="margin-left: 25px; margin-top: 35px; font-size: large"><b>Album:</b> {{album.album}} ({{album.metadata['year']}})</p>
+                <p style="margin-left: 35px; font-size: large"><b>Tracklist:</b></p>
+                {% for song in album.tracklist %}
+                    <p style="margin-left: 45px"><b>- {{song.title}}</b> ({{song.duration}}) {{song.format}}</p>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+</body>
+</html>
